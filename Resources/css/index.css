@@ -1,0 +1,122 @@
+.body{
+
+}
+
+.content{
+    background-image: url("../img/background.jpg");
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    transition: all .3s ease-in-out;
+}
+
+.logo-wrapper{
+    position: absolute;
+    top: 40%;
+    left: 45%;
+
+    width: 150px;
+    height: 150px;
+    background-color: #5571ff;
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    position: absolute;
+    background: url("../img/logo.png");
+    background-size: cover;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.msg{
+    position: absolute;
+    display: none;
+}
+.logo-form{
+    position: relative;
+    display: none;
+}
+
+.logo-form input:not(#login){
+    padding: 10px 45px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.logo-form input#login{
+    width: 48%;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.logo-form input#sigin{
+    width: 48%;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.logo-form input#sigin:hover{
+    background: #8cb2ff;
+    border-color: #8cb2ff;
+}
+
+.logo-form input#login:hover{
+    background: #8cb2ff;
+    border-color: #8cb2ff;
+}
+
+
+/* Changes */
+@keyframes balance {
+    from {transform: scale(1.0)}
+    to {transform: scale(1.1)}
+}
+
+.content-change{
+    filter:blur(5px);
+    animation-name:balance;
+    animation-duration:3s;
+    animation-iteration-count:1;
+    animation-fill-mode: forwards;
+}
+
+.wrapper-change{
+    border-radius:5px;
+    transform:scale(2,2);
+}
+
+.logo-change{
+    transform:scale(0.3);
+    margin-bottom:120px;
+}
+
+.msg{
+    display: block;
+    float: none;
+    position: absolute;
+    font-size: 0.5em;
+    color: red;
+    margin-left: 10px;
+    bottom: 0px;
+}
+
+.msg_none {
+    display: none;
+}
+
+.logo-form-change{
+    display:block;
+    float:none;
+    transform:scale(0.5);
+}

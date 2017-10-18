@@ -62,6 +62,7 @@ $(function () {
             logo_wrapper.addClass("wrapper-change");
             logo.addClass("logo-change");
             logo_form.addClass("logo-form-change");
+            msg.removeClass('msg_none');
             clicked = true;
         }
     })

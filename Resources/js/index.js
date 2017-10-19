@@ -46,7 +46,6 @@ $(function () {
     logo_wrapper = $('.logo-wrapper');
     logo = $('.logo');
     logo_form = $('.logo-form');
-    msg = $('.msg');
     clicked = false;
     logo.on('click',function (event) {
         if( clicked === true){

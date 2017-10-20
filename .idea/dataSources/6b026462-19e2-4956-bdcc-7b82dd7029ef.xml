@@ -30,9 +30,9 @@
     </column>
     <column id="12" parent="8" name="login_type">
       <Position>4</Position>
-      <DataType>enum(&apos;Admin&apos;, &apos;Professor&apos;)|0</DataType>
+      <DataType>enum(&apos;Aluno&apos;, &apos;Professor&apos;, &apos;Secretaria&apos;)|0</DataType>
     </column>
-    <column id="13" parent="8" name="status">
+    <column id="13" parent="8" name="login_status">
       <Position>5</Position>
       <DataType>enum(&apos;ativo&apos;, &apos;inativo&apos;)|0</DataType>
     </column>

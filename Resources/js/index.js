@@ -4,15 +4,6 @@ $(function () {
     var pass = $('#pass');
     var msg = $('.msg');
 
-    function capLock(e){
-        kc=e.keyCode?e.keyCode:e.which;
-        sk=e.shifKey?e.shifKey:((kc==16)?true:false);
-        if(((kc>=65 && kc <=90)&& !sk)||((kc >= 97 && kc <= 122) && sk))
-            document.getElementById('divMayus').style.visibility='visible';
-        else
-            document.getElementById('divMayus').style.visibility='hidden';
-
-    }
 
     $('form').on('submit', function (event) {
         event.preventDefault();
@@ -30,8 +21,10 @@ $(function () {
                 'pass': pass.val()
             },
             success: function (data, status) {
+                alert(data);
                 if(data > 0){
                     msg.text("Usuário encontrado");
+
                 }else{
                     msg.text("Usuário ou senha incorreto");
                 }

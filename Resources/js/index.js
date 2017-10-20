@@ -21,8 +21,8 @@ $(function () {
                 'pass': pass.val()
             },
             success: function (data, status) {
-                alert(data);
-                if(data > 0){
+                data_array = $.parseJSON(data);
+                if(data_array[0] > 0){
                     msg.text("Usuário encontrado");
 
                 }else{

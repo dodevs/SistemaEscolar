@@ -28,8 +28,8 @@ switch($_POST['action']){
         $query = "select * from login where login_user='$user' and login_pass=sha2('$pass',256)";
         $result = $link->query($query);
         $result_arr = mysqli_fetch_assoc($result);
-        array_push($login_data, [$result->num_rows, $result_arr['login_status'], $result_arr['login_type']]);
-        echo $login_data[1];
+        array_push($login_data, $result->num_rows, $result_arr['login_status'], $result_arr['login_type']);
+        echo json_encode($login_data, JSON_FORCE_OBJECT);
 
         break;
 

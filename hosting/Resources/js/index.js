@@ -39,18 +39,21 @@ $(function () {
     logo_wrapper = $('.logo-wrapper');
     logo = $('.logo');
     logo_form = $('.logo-form');
+    content = $('.content');
+
     clicked = false;
     logo.on('click',function (event) {
         if( clicked === true){
-            $('.content').removeClass("content-change");
+            content.removeClass("content-change");
             logo_wrapper.removeClass("wrapper-change");
             logo.removeClass("logo-change");
             logo_form.removeClass("logo-form-change");
             msg.addClass('msg_none');
+            msg.text("");
             clicked = false;
 
         }else if(clicked === false){
-            $('.content').addClass("content-change");
+            content.addClass("content-change");
             logo_wrapper.addClass("wrapper-change");
             logo.addClass("logo-change");
             logo_form.addClass("logo-form-change");

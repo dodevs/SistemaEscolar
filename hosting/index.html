@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <title>Lahas KIDS</title>
     <link rel="stylesheet" href="Resources/css/index.css">
-    <script
-            src="https://code.jquery.com/jquery-3.2.1.min.js"
-            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-            crossorigin="anonymous">
-    </script> <!-- Pegando da Internet -->
+    <script src="Resources/js/jquery-3.2.1.min.js"></script>
+    <!--<script-->
+            <!--src="https://code.jquery.com/jquery-3.2.1.min.js"-->
+            <!--integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="-->
+            <!--crossorigin="anonymous">-->
+    <!--</script> &lt;!&ndash; Pegando da Internet &ndash;&gt;-->
     <script src="https://cdn.wedeploy.com/api/2.3.1/wedeploy.js"></script>
     <script src="Resources/js/index.js"></script>
 </head>
@@ -18,7 +19,7 @@
     <p class="msg"></p>
     <div class="logo"></div>
     <form class="logo-form">
-        <input type="text" name="user" id="user" onkeypress="capLock(event)" placeholder="Usuario">
+        <input type="text" name="user" id="user" onkeypress="capLock(event)" placeholder="Usuario" autocomplete="off">
         <input type="password" name="pass" id="pass" placeholder="Senha">
         <input type="submit" id="login" value="Log in">
     </form>

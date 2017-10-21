@@ -1,0 +1,12 @@
+[
+  {
+    "path": "/logins/*",
+    "data": true,
+    "parameters":{
+      "user": {"type": "string", "required": true},
+      "pass": {"type": "string", "required": true},
+      "type": {"type": "string", "required": true},
+      "status": {"type": "string", "required": true}
+    }
+  }
+]

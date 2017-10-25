@@ -13,7 +13,7 @@ $(function () {
         }
 
         $.ajax({
-            url: 'http://127.0.0.1/SistemaEscolar/Resources/php/actions.php',
+            url: 'http://127.0.0.1/SistemaEscolar/hosting/Resources/php/actions.php',
             type: 'post',
             data: {
                 'action':'select',
@@ -22,12 +22,18 @@ $(function () {
             },
             success: function (data, status) {
                 data_array = $.parseJSON(data);
-                if(data_array[0] > 0){
-                    msg.text("Usuário encontrado");
-
+                if(data_array[1] !== "inativo"){
+                    if(data_array[0] > 0){
+                        msg.text("Usuário encontrado");
+                        window.location.href = "http://127.0.0.1/SistemaEscolar/hosting/pages/gerenciamento.php";
+                    }
+                    else{
+                        msg.text("Usuário ou senha incorreto");
+                    }
                 }else{
-                    msg.text("Usuário ou senha incorreto");
+                    msg.text("Usuário inativo!");
                 }
+
             },
             error: function (xhe, desc, err) {
                 console.log(xhe);

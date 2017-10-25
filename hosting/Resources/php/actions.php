@@ -15,6 +15,11 @@ $link = mysqli_connect('127.0.0.1', 'application', 'client777', 'sghe');
 
 switch($_POST['action']){
 
+    case 'logof':
+        setcookie("login_type", "", time( )+1);
+        echo $_COOKIE['login_type'];
+        break;
+
     case 'insert':
         $user = $_POST['user'];
         $pass = $_POST['pass'];
@@ -29,6 +34,9 @@ switch($_POST['action']){
         $result = $link->query($query);
         $result_arr = mysqli_fetch_assoc($result);
         array_push($login_data, $result->num_rows, $result_arr['login_status'], $result_arr['login_type']);
+        session_start();
+        setcookie('login_type', $result_arr['login_type'],0, "/");
+        setcookie('login_user', $result_arr['login_user'],0, "/");
         echo json_encode($login_data, JSON_FORCE_OBJECT);
 
         break;

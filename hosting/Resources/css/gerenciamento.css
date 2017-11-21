@@ -70,8 +70,13 @@ div#username{
 
 /* MENU############## */
 .ui-tabs {
-    position: absolute;
+    position: relative;
     top: 90px;
 }
 
+.aba_icon{
+    width: 28px;
+    height: auto;
+
+}
 

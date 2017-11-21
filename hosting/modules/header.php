@@ -10,6 +10,6 @@
     <?php require "abas.php" ?>
     <div id="user-name">
         <div id="avatar"></div>
-        <div id="username"><?php echo $_COOKIE['login_user'] ?></div>
+        <div id="username"><?php echo $_SESSION['login_user'] ?></div>
     </div>
 </div>

@@ -8,13 +8,13 @@
 ?>
 <div id="tabs">
     <ul>
-        <li><a href="#tabs-1"> Aluno </a></li>
-        <li><a href="#tabs-2"> Professor </a></li>
-        <li><a href="#tabs-3"> Secretaria </a></li>
+        <li><a href="#tabs-1"><img class="aba_icon" src="../Resources/img/alunos.png"> </a></li>
+        <li><a href="#tabs-2"><img class="aba_icon" src="../Resources/img/professor.png"></a></li>
+        <li><a href="#tabs-3"><img class="aba_icon" src="../Resources/img/secretaria.png"></a></li>
     </ul>
 
     <div id="tabs-1">
-        Funcionalidades referentes ao aluno.
+        Funcionalidades referentes ao Aluno
     </div>
 
     <div id="tabs-2">
@@ -22,7 +22,7 @@
     </div>
 
     <div id="tabs-3">
-        Funcionalidades referentes a Secretaria.
+        <?php include "secretaria.php"?>
     </div>
 </div>
 

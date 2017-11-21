@@ -12,34 +12,74 @@
     <schema id="6" parent="1" name="php"/>
     <schema id="7" parent="1" name="projeto"/>
     <table id="8" parent="2" name="login"/>
-    <column id="9" parent="8" name="login_id">
+    <table id="9" parent="2" name="professor"/>
+    <column id="10" parent="8" name="login_id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="10" parent="8" name="login_user">
+    <column id="11" parent="8" name="login_user">
       <Position>2</Position>
       <DataType>varchar(40)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="11" parent="8" name="login_pass">
+    <column id="12" parent="8" name="login_pass">
       <Position>3</Position>
       <DataType>char(64)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="12" parent="8" name="login_type">
+    <column id="13" parent="8" name="login_type">
       <Position>4</Position>
-      <DataType>enum(&apos;Aluno&apos;, &apos;Professor&apos;, &apos;Secretaria&apos;)|0</DataType>
+      <DataType>enum(&apos;Professor&apos;, &apos;Aluno&apos;, &apos;Secretaria&apos;)|0</DataType>
+      <NotNull>1</NotNull>
     </column>
-    <column id="13" parent="8" name="login_status">
+    <column id="14" parent="8" name="login_status">
       <Position>5</Position>
-      <DataType>enum(&apos;ativo&apos;, &apos;inativo&apos;)|0</DataType>
+      <DataType>enum(&apos;Ativo&apos;, &apos;Inativo&apos;)|0</DataType>
     </column>
-    <key id="14" parent="8" name="PRIMARY">
+    <index id="15" parent="8" name="login_user">
+      <ColNames>login_user</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="16" parent="8" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>login_id</ColNames>
       <Primary>1</Primary>
     </key>
+    <key id="17" parent="8" name="login_user">
+      <ColNames>login_user</ColNames>
+      <UnderlyingIndexName>login_user</UnderlyingIndexName>
+    </key>
+    <column id="18" parent="9" name="professor_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="19" parent="9" name="professor_name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="20" parent="9" name="login_id">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="21" parent="9" name="login_id">
+      <ColNames>login_id</ColNames>
+    </index>
+    <key id="22" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>professor_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="23" parent="9" name="professor_ibfk_1">
+      <ColNames>login_id</ColNames>
+      <RefSchemaName>sghe</RefSchemaName>
+      <RefTableName>login</RefTableName>
+      <RefColNames>login_id</RefColNames>
+    </foreign-key>
   </database-model>
 </dataSource>

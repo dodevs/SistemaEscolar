@@ -5,6 +5,8 @@ $(function () {
     var msg = $('.msg');
 
 
+
+
     $('form').on('submit', function (event) {
         event.preventDefault();
         if(user.val() === "" || pass.val() === ""){
@@ -16,13 +18,13 @@ $(function () {
             url: 'http://127.0.0.1/SistemaEscolar/hosting/Resources/php/actions.php',
             type: 'post',
             data: {
-                'action':'select',
+                'action':'selectUser',
                 'user': user.val(),
                 'pass': pass.val()
             },
             success: function (data, status) {
                 data_array = $.parseJSON(data);
-                if(data_array[1] !== "inativo"){
+                if(data_array[1] !== "Inativo"){
                     if(data_array[0] > 0){
                         msg.text("Usuário encontrado");
                         window.location.href = "http://127.0.0.1/SistemaEscolar/hosting/pages/gerenciamento.php";

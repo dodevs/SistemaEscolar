@@ -22,7 +22,22 @@
     </div>
 
     <div id="tabs-3">
-        <?php include "secretaria.php"?>
+        
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="javascript:void(0)" onclick="showOrHidden('subtab-professor')">Professores</a>
+            <a href="javascript:void(0)" onclick="showOrHidden('subtab-aluno')">Alunos</a>
+            <a href="#">Disciplinas</a>
+        </div>
+        <span style="font-size: 30px; cursor: pointer" onclick="openNav()">&#9776; Opções</span>
+
+        <div id="subtab-professor">
+            <?php require "professor.php" ?>
+        </div>
+
+        <div id="subtab-aluno" style="display: none">
+            <?php require "aluno.php" ?>
+        </div>
     </div>
 </div>
 

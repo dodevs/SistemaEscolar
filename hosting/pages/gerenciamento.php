@@ -38,7 +38,7 @@ session_start();
     <?php
         require "../modules/header.php";
     ?>
-    <div style="height: 1000px; width: 100%"></div>
+    <?php require "../modules/abas.php" ?>
     <!--<script src="../Resources/js/gerenciamento.js"> </script>-->
 </body>
 </html>

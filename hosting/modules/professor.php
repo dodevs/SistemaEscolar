@@ -11,7 +11,7 @@ $result = $link->query($query)
 ?>
 
 <form id="cadastro-form">
-    <input type="text" name="nome" id="nome-onSec" size=37 autocomplete="off" placeholder="Nome">
+    <input type="text" name="nome" id="nome-onSec" autocomplete="off" placeholder="Nome">
     <input type="text" name="usuario" id="usuario-onSec" autocomplete="off" placeholder="Usuario">
     <input type="password" name="senha" id="senha-onSec" autocomplete="off" placeholder="Senha">
     <select name="tipo" id="tipo-onSec" size="0">
@@ -27,7 +27,8 @@ $result = $link->query($query)
 </form>
 
 <div class="professores">
-    <table id="professores-table" border=1>
+    <table id="professores-table" class="scroll-table" border=1>
+        <thead>
         <tr>
             <th>Nome</th>
             <th>Usuario</th>
@@ -35,10 +36,12 @@ $result = $link->query($query)
             <th>Tipo</th>
             <th>Status</th>
         </tr>
+        </thead>
+        <tbody>
         <?php
             while($line = mysqli_fetch_assoc($result)){
                 echo "<tr>";
-                echo "<td>".$line['professor_name']."</td>";
+                echo "<td contenteditable='true'>".$line['professor_name']."</td>";
                 echo "<td>".$line['login_user']."</td>";
                 //preg_replace("/[^0-9\s]/", "", $example4);
                 echo "<td>**********</td>";
@@ -47,6 +50,7 @@ $result = $link->query($query)
                 echo "</tr>";
             }
         ?>
+        </tbody>
     </table>
 </div>
 

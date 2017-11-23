@@ -34,7 +34,17 @@ switch($_POST['action']){
         }else{
             echo -1;
         }
+        break;
 
+    case 'inserirAlun':
+        $nome = $_POST['name'];
+        $login_id = $_POST['loginId'];
+        $query = "insert into aluno values(default, '$nome', '$login_id')";
+        if($link->query($query)){
+            echo 1;
+        }else{
+            echo -1;
+        }
         break;
 
     case 'insertUser':

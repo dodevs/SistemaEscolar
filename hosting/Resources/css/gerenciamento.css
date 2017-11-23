@@ -5,7 +5,7 @@ div.header{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 0;
+    z-index: 1;
 }
 
 /* LOGO ############## */
@@ -69,6 +69,10 @@ div#username{
 }
 
 /* MENU############## */
+#tabs{
+    z-index: 0;
+}
+
 .ui-tabs {
     position: relative;
     top: 90px;
@@ -77,6 +81,9 @@ div#username{
 .aba_icon{
     width: 28px;
     height: auto;
+}
 
+#tabs-3-tabs{
+    position: relative;
 }
 

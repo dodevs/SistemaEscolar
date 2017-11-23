@@ -1,3 +1,16 @@
+function openNav(){
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav(){
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+function showOrHidden(id){
+    display_prof = $('#'+id);
+    display_prof.toggle();
+}
+
 $(function () {
 
     function validateForms(forms){

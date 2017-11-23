@@ -22,6 +22,7 @@ $(function () {
             case 'Secretaria':
                 $('#tabs').tabs({active: 2});
                 $('#tabs').tabs("option", "disabled", [0,1]);
+                $("#tabs-3-tabs").tabs();
                 break;
         }
     });
